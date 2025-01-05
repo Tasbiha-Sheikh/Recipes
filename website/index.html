@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Foodies</title>
+</head>
+<body>
+
+    <!--- Navigation Bar -->
+    <div class="header">
+        <nav class="nav-bar">
+           <a href="index.html"><img src="FOODIES (1).png"  class="brand-name"></a> 
+            <a href="#" class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="menu-bar">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="meal plans.html">MEAL PLANS</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    
+                </ul>
+            </div>
+        </nav>
+        <!-- Search Bar -->
+        <div class="title titletry">Find a Recipe </div>
+        <div class="search-wrapper">
+            <div class="fa fa-search"></div>
+            <input type="text" name=""  id="search" placeholder="What do you want to eat?" onkeyup="search()">
+            <div class="fa fa-times" onclick="clearInput()" ></div>
+        </div>
+    </div>
+    <br>
+    <!-- Search Results -->
+        <div class="result">
+            <h1>Your Search Result: </h1>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="card-grid" >
+            <div class="food-list" id="food-list">
+                    <p id="none" style="display: none;">Sorry, the food you were looking for was not available.</p>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="https://www.simplyrecipes.com/thmb/EfW2aueb8OnQ5V1yPkcTQ5Jnkc4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Blueberry-Smoothie-LEAD-4-1ad9fbf4fd7743c2bf6479ffa1a38e41.jpg">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Blueberry Smoothie</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get2ndRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+                    
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="img/spongy pancakes.jpg">
+    
+                        </div>
+                        <div class="card-body" >
+                            <h3>spongy pancakes</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get3rdRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="https://i.ytimg.com/vi/mv4rSG9l5GE/maxresdefault.jpg">
+                        </div>
+                        <div class="card-body" >
+                        <h3> Korma</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="getRecipeDetails()">Get Recipe</button>
+                        </div>
+                    </div> 
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="./img/Omelette.webp">
+                        </div>
+                        <div class="card-body" >
+                            <h3>Omelette</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get4thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="https://recipe52.com/wp-content/uploads/2018/04/White-Chicken-Karahi-Recipe-with-Cream.jpg">
+                        </div>
+                        <div class="card-body" >
+                        <h3>Chicken white karahi</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get5thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="img/chicken rice image.jpg">
+                        </div>
+                        <div class="card-body" >
+                        <h3>Chicken fried rice</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get6thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="https://media.istockphoto.com/id/1278934775/photo/chicken-madras-curry-in-black-bowl-isolated-on-white-indian-cuisine-dish-with-with-chicken.jpg?s=612x612&w=0&k=20&c=kqh4xmqiGQsQHsD5SeuauLfvzGjSIpJmXRgcI0nxZaY=">
+                        </div>
+                        <div class="card-body" >
+                            <h3>Chicken jalfrezi</h3>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn" onclick="get7thRecipe()">Get Recipe</button>
+                            </div>
+                        </div>
+                        <div class="card card-shadow">
+                            <div class="card-header card-image">
+                                <img src="https://www.feastingathome.com/wp-content/uploads/2013/01/Chicken-Lasagna.jpg">
+                            </div>
+                        
+                        <div class="card-body" >
+                        <h3>Chicken Lasagna</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get8thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="img/desert.jpg">
+                        </div>
+                        <div class="card-body" >
+                        <h3>Cherry cream cheese desert</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get9thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>
+                    <div class="card card-shadow">
+                        <div class="card-header card-image">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2h0oT_xaWw_7mD6IZEbvLRqIzcg6WOKKGXdokFB2BMw&s">
+                        </div>
+                        <div class="card-body" >
+                        <h3>Grilled chicken</h3>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn" onclick="get10thRecipe()">Get Recipe</button>
+                        </div>
+                    </div>       
+            </div> 
+            <!--Ending of Main Content-->
+
+            <div class = "meal-detail" id="meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+    
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">korma</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Philippine adobo is a popular Filipino dish and cooking process in Philippine cuisine that involves meat, seafood, or vegetables marinated in vinegar, soy sauce, garlic, bay leaves, and black peppercorns, which is browned in oil, and simmered in the marinade. </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p><br>1 kg Mutton</br>
+                        <br>250 g Yogurt</br>
+                        <br>250 g Onion nice golden</br>
+                        <br>1 tbsp Garlic paste</br>
+                        <br>1 tbsp Ginger paste</br>
+                        <br>1 cup Oil</br>
+                       <br>1 packet National quorma mix</br> 
+                        <br>2 tbsp Ginger(julienne)</br>
+                        <br>3 cup Water</br>
+                    </p>
+                        <h3>Instruction:</h3>
+                            <p><br>Heat oil.</br> 
+                                <br>Fry onions till golden colour.</br>
+                                <br>Add mutton and fry for 2 mins.</br>
+                                <br>Add Ginger garlic paste and fry until mutton colour changes.</br>
+                                <br>Add yogurt.</br>
+                                <br>Add quorma packet.</br>                            
+                                <br>Mix it well.</br>
+                                <br>Add 3 cups of water.</br>
+                                <br>Cook for 30 to 35 mins until mutton is tender.</br>
+                                <br>Add the crushed onions and cook for 5 mins at low heat.</br>
+                                <br>Sprinkle ginger while serving.</br>
+                            </p>
+                    </div>
+                    <div class = "meal-img">
+                        <img src="https://img-global.cpcdn.com/steps/e64b0b0360c0e9c9/160x128cq70/quorma-recipe-step-11-photo.webp" alt="">  
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.youtube.com/watch?v=9jOH3TEB-NI&pp=ygUMa29ybWEgcmVjaXBl" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div>   
+
+            <div class = "second-meal-detail" id="second-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Blueberry Smoothie</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Blueberry smoothie recipes are a great way to use fresh or frozen berries, and this is a delicious one!Blueberry smoothie recipes are a great way to use fresh or frozen berries, and this is a delicious one! </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <br><br>1 cup blueberries(frozen or fresh)
+                            <br>1 (8 ounce) container plain yogurt
+                            <br>2 cup reduced-fat milk
+                            <br>2 tbsp white sugar
+                            <br>1/2 tbsp venilla extract
+                            <br>1/8 teaspoon ground nutmeg
+                                             </p>
+                                             <h3>Instruction:</h3> <p>
+                                             <br> Gather all ingrediants 
+                                             
+                                             <br>Blend blueberries, yogurt, milk, sugar, vanilla, and nutmeg in a blender until frothy, scraping down the sides of the blender if needed
+                                            
+                                             <br>Divide between 2 glasses and serve immediately. Enjoy!
+                            </p>
+                    </div>
+                    <div class = "meal-img">
+                        <img src="https://www.allrecipes.com/thmb/PeGz_f-_EZHNuCsKViel9PM9tNw=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/215184-blueberry-smoothie-ddmfs-0407-3x4-hero-2dc0563113084f1faea7ad1d7fe58d38.jpg" alt=""> 
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.youtube.com/watch?v=UoeJn55JR8A&pp=ygUaYmx1ZWJlcnJ5IHNtb290aGllIHJlY2lwZSA%3D" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+            </div>  
+            <div class = "third-meal-detail" id="third-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Spongy pancakes</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">They have a golden brown exterior and a soft and moist crumb that hold together. Their flavor is mild, gently sweet and nutty.They have a golden brown exterior and a soft and moist crumb that hold together. Their flavor is mild, gently sweet and nutty 
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <br>
+                        <br> 1 cup all-purpose flour
+                        <br> 2 tablespoons sugar
+                        <br>1 teaspoon baking powder
+                        <br>1/2 teaspoon baking soda
+                        <br>1/4 teaspoon salt
+                        <br>3/4 cup buttermilk
+                        <br>1/4 cup milk
+                        <br>1 large egg
+                        <br>2 tablespoons melted butter or vegetable oil
+                        <br>1 teaspoon vanilla extract (optional)
+                        <br>Butter or oil for cooking
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>Mix Dry Ingredients: In a large bowl, whisk together the flour, sugar, baking powder, baking soda, and salt.
+
+                            <br>Mix Wet Ingredients: In another bowl, whisk together the buttermilk, milk, egg, melted butter (or oil), and vanilla extract if using.
+                            
+                            <br>Combine Ingredients: Pour the wet ingredients into the dry ingredients. Stir gently until just combined. The batter should be lumpy; do not overmix.
+                            
+                            <br>Preheat Pan: Heat a non-stick skillet or griddle over medium heat. Lightly grease with butter or oil.
+                            
+                            <br>Cook Pancakes: Pour 1/4 cup of batter onto the skillet for each pancake. Cook until bubbles form on the surface and the edges look set, about 2-3 minutes. Flip and cook until golden brown on the other side, about 1-2 minutes more.
+                            
+                            <br>Serve: Serve the pancakes warm with your favorite toppings like maple syrup, fresh fruit, whipped cream, or butter.
+                            </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "https://www.allrecipes.com/thmb/-wws6630BWOmD7GBBM2wKSB-26U=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/3213063_FluffyPancakes4x3snowman-c4668491ca30428c9f2150b960c9ab4e.jpg">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.youtube.com/watch?v=NCMKedZvnyI&pp=ygUVc3Bvbmd5IHBhbmNha2UgcmVjaXBl" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                      
+                </div>
+            </div>  
+            <div class = "four-meal-detail" id="four-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Omelette</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">In cuisine, an omelette is a dish made from beaten eggs, fried with butter or oil in a frying pan. It is quite common for the omelette to be folded around fillings such as chives, vegetables, mushrooms, meat, cheese, onions or some combination of the above. 
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p><br>3 eggs, beaten
+                            <br>1 tsp sunflower oil
+                            <br>1 tsp butter
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>1. Beat the eggs: Use two or three eggs per omelette, depending on how hungry you are. Beat the eggs lightly with a fork.
+                            2. Melt the butter: Use an 8-inch nonstick skillet for a 2-egg omelette, a 9-inch skillet for 3 eggs. Melt the butter over medium-low heat, and keep the temperature low and slow when cooking the eggs so the bottom doesn’t get too brown or overcooked.
+                            3. Add the eggs: Let the eggs sit for a minute, then use a heatproof silicone spatula to gently lift the cooked eggs from the edges of the pan. Tilt the pan to allow the uncooked eggs to flow to the edge of the pan.
+                            4. Fill the omelette: Add the filling—but don’t overstuff the omelette—when the eggs begin to set. Cook for a few more seconds
+                            5. Fold and serve: Fold the omelette in half. Slide it onto a plate with the help of a silicone spatula.
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "./img/Omelette.webp" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://tinyurl.com/bde4yd4u" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                      
+                </div>
+            </div>  
+            <div class = "five-meal-detail" id="five-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Chicken white karahi</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">White karahi is a Pakistani Dhaba (roadside restaurant) food. It is a white-colored tomato-free version of traditional red karahi. It is enriched with yogurt and cream. The recipe evolved in the hands of restaurant cooks.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p> <br>Cream
+                            <br>Yogurt
+                            <br>Ginger or garlic paste 
+                            <br>Green chilli paste
+                            <br>Chicken 
+                            <br>Onion paste
+                            <br>Oil
+                            <br>Whole spices(salt , black pepper , Corainder powder , garam masala)
+                        </p>
+                        <h3>Instruction:</h3>
+                        <br><br> Heat Oil
+                        In a large karahi  heat the oil or ghee over medium heat.
+                        
+                        <br>Add Chicken:
+                        Add the chicken pieces to the onions and cook until the chicken changes color and is no longer pink.
+                        
+                        <br>Add Ginger-Garlic Paste:
+                        Mix in the ginger-garlic paste and cook for 2-3 minutes until fragrant.
+                        
+                        <br>Add Spices:
+                        Add black pepper, white pepper, cumin seeds, coriander powder, and salt. Stir well to coat the chicken evenly with the spices.
+                        
+                       <br> Cook Yogurt:
+                        Add the whisked yogurt to the chicken mixture and cook, stirring frequently, until the yogurt is well blended and the oil starts to separate from the masala.
+                        
+                        <br>Add Cream:
+                        Lower the heat and stir in the cream. Continue to cook for a few more minutes until the chicken is fully cooked and tender.
+                        
+                       <br> Add Green Chilies:
+                        Add the sliced green chilies and garam masala. Stir well and cook for another 2-3 minutes.
+                        
+                        <br>Garnish:
+                        Garnish with fresh coriander leaves and julienned ginger.
+                        
+                        <br>Serve:
+                        Serve hot with naan, roti, or steamed rice.
+                        </p>
+                    </div>
+                    <div class = "meal-img">
+                        <img src = "garnish.jpg" alt = "">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.youtube.com/watch?v=CUSySy6XiwQ&pp=ygUcY2hpY2tlbiB3aGl0ZSBrYXJhaGkgIHJlY2lwZQ%3D%3D" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                      
+                </div>
+            </div> 
+            <div class = "six-meal-detail" id="six-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Chicken fried rice </h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">cheicken fried rice is a Pakistani Dhaba (roadside restaurant) food. It is a white-colored tomato-free version of traditional red karahi. It is enriched with yogurt and cream. The recipe evolved in the hands of restaurant cooks.
+                        </p>
+                    </div>
+                    <br class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p><br>3/4 pound boneless chicken thighs
+                            <br>1 teaspoon salt, divided
+                            <br>3 tablespoons canola oil divided
+                            <br>3 large eggs, whisked
+                            <br>2/3 cup green onions
+                            <br>2  garlic, minced
+                            <br>2 teaspoons minced ginger
+                            <br>1 large carrot, peeled and diced
+                            <br>2/3 cup frozen peas
+                            <br>4 cups cooked jasmine rice
+                            <br>2 scallions, sliced 
+                            <br>1/2 teaspoon Chinese five-spice powder
+                            <br> 1/2 tablespoons soya sauce or tamari
+                            <br>1 teaspoon sesame oil
+                        </p>
+                        <h3>Instruction:</h3>
+                        <br> <br> Prepare the chicken:
+                            Chop the chicken into small 1/4-inch to 1/2-inch cubes.
+                             Sprinkle 1/2 teaspoon of salt over the chicken and mix to combine.
+                             Set the chicken aside for about 10 minutes (I usually use this time to chop all the vegetables).
+                            
+                    
+                        <br> Scramble the egg:
+                            Heat a wok or large sauté pan over medium-high heat. Swirl in a tablespoon of oil and add the whisked eggs.
+                             Use a spatula to quickly scramble the eggs, breaking the curds into smaller pieces as they come together.
+                             Transfer the eggs to a plate.
+                    
+                            <br>Cook the chicken:
+                                Add another tablespoon of oil in the wok or pan. 
+                                Add the chicken and cook for 4 to 5 minutes, stirring occasionally. 
+                                Turn off the heat and transfer the cooked chicken to a plate.
+                                Using your spatula, scrape off any chicken bits that are still stuck to the wok so they don't burn during the next step. 
+                                You can also use paper towels to wipe down your wok or pan. 
+                    
+                                <br>Cook the vegetables:
+                                    Swirl 1 tablespoon of oil into the wok over medium-high heat. 
+                                    Add the diced onions and cook them for 1 minute, until they start to soften. 
+                                    Mix in the minced garlic and ginger and cook until fragrant, about 30 seconds. 
+                                    Add the diced carrots and cook for 2 minutes, stirring frequently.
+                                     Add 1/2 teaspoon salt and the peas, and stir to incorporate.
+                    
+                                <br>Cook the rice:
+                                    Add the rice to the wok or pan on top of the vegetables and stir to combine. 
+                                    Using the back of your spatula, smash any large chunks of rice to break them apart. 
+                                    Add the white and green parts of the sliced scallions (save the dark green parts) and five-spice powder. Stir to incorporate. 
+                                    If the rice starts to stick to the pan, stir in a little more oil.
+                                    Drizzle the soy sauce and sesame oil over the rice and stir to incorporate. Stir in the cooked chicken, scrambled eggs, and the dark parts of the scallions. 
+                                    Stir briefly to bring it together, and cook for another 1 to 2 minutes.
+                                <br> Serve:
+                                       Taste, and add more soy sauce if necessary. Serve immediately
+                    </div>
+                    <div class = "meal-img">
+                        <img src="chicken rice image.jpg">
+                      </div>
+                      <div class = "meal-link">
+                        <a href=" https://www.youtube.com/watch?v=WTUz9fOVpiI&pp=ygUZY2hpY2tlbiBmcmllZCByaWNlIHJlY2lwZQ%3D%3D" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                      
+                </div>
+            </div> 
+            <div class = "seven-meal-detail" id="seven-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+            
+              <!-- recipe details -->
+              <div class="meal-content">
+                <h2 class="meal-name">Chicken jalfrezi </h2>
+                <div class="meal-about">
+                    <h3 class="meal-title-about">About Meal</h3>
+                    <p class="meal-descript-about">Chilli and capsicum are two key ingredients in Jalfrezi that offer a range of health benefits. Both chilli and capsicum are rich in antioxidants, which are compounds that help protect the body from damage caused by free radicals.
+                    </p>
+                </div>
+                <br class = "meal-instruct">
+                    <h3>Ingridients:</h3>
+                    <p><br> 1 lb boneless chicken
+                       <br> ½ large onion, diced, approx half cup
+                       <br> 1 tsp ginger paste
+                       <br> ½ tsp garlic paste
+                      <br>  3 tomatoes (diced)
+                       <br> ¾-1 tsp red chili powder
+                     <br>   ¾-1 tsp salt
+                      <br>  1 tsp soy sauce
+                     <br>   1 diced green pepper
+                      <br>  1 + ⅔ sliced green chilies
+                      <br>  ½-3/4 tsp freshly cracked black pepper
+                    </p>
+                    <h3>Instruction:</h3>
+                    <br> <br> Prepare the chicken:
+                        Chop the chicken into small 1/4-inch to 1/2-inch cubes.
+                         Sprinkle 1/2 teaspoon of salt over the chicken and mix to combine.
+                         Set the chicken aside for about 10 minutes (I usually use this time to chop all the vegetables).
+                        
+                
+                    <br> Scramble the egg:
+                        Heat a wok or large sauté pan over medium-high heat. Swirl in a tablespoon of oil and add the whisked eggs.
+                         Use a spatula to quickly scramble the eggs, breaking the curds into smaller pieces as they come together.
+                         Transfer the eggs to a plate.
+                
+                        <br>Cook the chicken:
+                            Add another tablespoon of oil in the wok or pan. 
+                            Add the chicken and cook for 4 to 5 minutes, stirring occasionally. 
+                            Turn off the heat and transfer the cooked chicken to a plate.
+                            Using your spatula, scrape off any chicken bits that are still stuck to the wok so they don't burn during the next step. 
+                            You can also use paper towels to wipe down your wok or pan. 
+                
+                            <br>Cook the vegetables:
+                                Swirl 1 tablespoon of oil into the wok over medium-high heat. 
+                                Add the diced onions and cook them for 1 minute, until they start to soften. 
+                                Mix in the minced garlic and ginger and cook until fragrant, about 30 seconds. 
+                                Add the diced carrots and cook for 2 minutes, stirring frequently.
+                                 Add 1/2 teaspoon salt and the peas, and stir to incorporate.
+                
+                            <br>Cook the rice:
+                                Add the rice to the wok or pan on top of the vegetables and stir to combine. 
+                                Using the back of your spatula, smash any large chunks of rice to break them apart. 
+                                Add the white and green parts of the sliced scallions (save the dark green parts) and five-spice powder. Stir to incorporate. 
+                                If the rice starts to stick to the pan, stir in a little more oil.
+                                Drizzle the soy sauce and sesame oil over the rice and stir to incorporate. Stir in the cooked chicken, scrambled eggs, and the dark parts of the scallions. 
+                                Stir briefly to bring it together, and cook for another 1 to 2 minutes.
+                            <br> Serve:
+                                   Taste, and add more soy sauce if necessary. 
+                </div>
+                <div class = "meal-img">
+                    <img src="https://media.istockphoto.com/id/1278934775/photo/chicken-madras-curry-in-black-bowl-isolated-on-white-indian-cuisine-dish-with-with-chicken.jpg?s=612x612&w=0&k=20&c=kqh4xmqiGQsQHsD5SeuauLfvzGjSIpJmXRgcI0nxZaY=">
+                  </div>
+                  <div class = "meal-link">
+                    <a href=" https://www.youtube.com/watch?v=6zYCE6MbTZo&pp=ygUYY2hpY2tlbiBqYWxmcmV6aSByZWNpcGUg" class="meal-link-btn" >Watch Video</a>
+                </div>
+                  
+            </div>
+        </div> 
+        <div class = "eight-meal-detail" id="eight-meal-detail">
+            <!-- recipe close btn -->
+            <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                <i class ="fas fa-times"></i>
+            </button>
+
+
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Chicken Lasagna</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Lasagna is a wide, flat sheet of pasta. Lasagna can refer to either the type of noodle or to the typical lasagna dish which is a dish made with several layers ofFried chicken, also known as Southern fried chicken,Fried chicken, also known as Sles.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p><br>3 boneless chicken breasts (around half a kg)
+                            <br>1 tspn of pepper
+                            <br>1 tspn of salt
+                            <br>2 tblspns of worcestershire sauce
+                            <br>1 tspn of Mustard powder or all spice powder
+                            <br>2 tblspns of Flour
+                            <br>1 Egg
+                            <br>1 1/2 cups of Breadcrumbs
+                            <br>Soft seeded burger buns
+                            <br>Mayonnaise or KFC Zinger Sauce
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br>1. If your chicken breasts are too big, slice them before cooking. Then, marinade the chicken breasts in the Worcestershire sauce, pepper, salt, mustard, or all-spice powder. Leave the chicken for at least four hours or over night.
+                            <br>2. An egg and two tablespoons of water should be beaten together to make the batter, which should then be set aside.
+                            <br>3. Chicken breasts that have been marinated should be heavily dusted in flour. They should be well coated after being dipped in both the egg and the breadcrumbs.
+                            <br>4. The coated chicken breasts should be deep-fried in heated oil over a medium-high heat until they are crisp and golden brown.
+                            <br>5. The finished burger should be stacked with the lettuce on top, followed by the chicken, and then the mayonnaise or KFC zinger sauce. The buns should be cut in half and lightly toasted. If you'd like a cheesy kick, add some sliced American cheese.
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src="https://www.allrecipes.com/thmb/oAV1s4BNtV66I9xk4LEYnRwIF7Y=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/2124654-ef7540d37d344e0c954016164155d423.jpg"/>
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.youtube.com/watch?v=BDFaPIZso68&pp=ygUkY2hpY2tlbiBsYXNhZ25hIHJlY2lwZSB3aXRob3V0IG92ZW4g" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                      
+                </div>
+            </div> 
+            <div class = "nine-meal-detail" id="nine-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+               
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Cherry cream cheese desert</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p><br>Graham cracker crumbs
+                            <br>Melted butter
+                            <br>Sugar
+                            <br>Cream cheese
+                            <br>Powdered sugar
+                            <br>Cool whip
+                            <br>Cherry pie filling
+                            <br>Fresh cherries
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br> STEP 1: Prep
+                            Preheat the oven to 375 degrees and lightly spray a baking dish with nonstick spray and set aside.</br>
+                       
+                           <br>STEP 2: MAKE THE CRUST
+                               Combine graham cracker crumbs, sugar, and melted butter in a medium bowl. Then, spread the mixture into the baking dish, pressing to form an even, smooth layer. Bake for 10 minutes, then let the crust cool completely.<br>
+                            
+                               <br>STEP 3: MAKE THE CHEESECAKE LAYER
+                                   Beat the softened cream cheese in a medium bowl for 2 to 3 minutes until smooth and creamy. Then, add the powdered sugar and beat on low speed until combined. Finally, fold the Cool Whip into the cream cheese mixture until completely combined. Spread the cheesecake mixture evenly over the cooled graham cracker crust.</br>
+                                
+                                   <br>STEP 4: ADD CHERRIES AND CHILL
+                                       Pour the cherry pie filling over the cheesecake layer and gently spread evenly. Place fresh cherries all over the filling if desired. Then, cover the dish with foil and chill for at least 4 hours.</br>
+                        </p>
+                
+                    </div>
+                    <div class = "meal-img">
+                        <img src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Cherry-Delight-Dessert_EXPS_TOHcom23_27515_P2_MD_03_22_4b.jpg" alt=""> 
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.youtube.com/watch?v=iAGSOHFnTzs&pp=ygUiY2hlcnJ5IGNoZWVzZSBjcmVhbSBkZXNlcnQgcmVjaXBlIA%3D%3D" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                      
+                </div>
+            </div>
+            </div> 
+            <div class = "ten-meal-detail" id="ten-meal-detail">
+                <!-- recipe close btn -->
+                <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn" onclick="closeBtn()">
+                    <i class ="fas fa-times"></i>
+                </button>
+
+               
+                <!-- recipe details -->
+                <div class="meal-content">
+                    <h2 class="meal-name">Grilled Chicken</h2>
+                    <div class="meal-about">
+                        <h3 class="meal-title-about">About Meal</h3>
+                        <p class="meal-descript-about">Chicken cooked on the grill offers many tasty and healthful options. Skinless, boneless breasts or breast tenders are low in fat and cook quickly.Fried chicken, also known as Southern fried chicken,Fried chicken, also known as Southern fried chicken.
+                        </p>
+                    </div>
+                    <div class = "meal-instruct">
+                        <h3>Ingridients:</h3>
+                        <p><br> Boneless Chicken
+                            <br>2 tbsp Olive oil
+                            <br>Ginger garlic paste
+                            <br>Chilli powder
+                            <br>Corrainder powder
+                            <br>Cumin powder
+                            <br>Black pepper
+                            <br>Salt
+                            <br>Garam masla 
+                        </p>
+                        <h3>Instruction:</h3>
+                        <p><br> Prepare the Chicken: Start with your thin chicken cutlets. If you haven’t already, follow the instructions above to pound your chicken to an even thickness of about 1/4 inch.</br>
+                            <br>Marinate the Chicken: Combine olive oil, garlic, dried herbs and vinegar in a large deep shallow dish. Season the chicken on both sides with salt and black pepper then add them to the marinade. Make sure they’re evenly coated then, cover and marinate in an airtight container in the fridge at least 30 minutes, but preferably up to 2 hours for better flavor. Or as long as overnight.</br> 
+                            <br>Preheat Your Grill: Heat your grill or grill pan to medium-high heat. If you’re using a charcoal grill, wait until the coals are covered with white ash.</br> 
+                            <br> Cook Chicken: Once your grill is heated, oil the grill grates and add the chicken. Grill the chicken about 2-3 minutes on each side, or until browned and the internal temperature reaches 165°F (74°C). Because the cutlets are thin, they will cook quickly. Be careful not to overcook them, as chicken can become dry if cooked too long.</br>
+                           <br>Rest and Serve: Once cooked, let the chicken rest for a few minutes before serving. This allows the juices to redistribute throughout the chicken, making it more tender and flavorful.</br> 
+                        </p>
+                    </div>
+                    <div class = "meal-img">
+                        <img src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2h0oT_xaWw_7mD6IZEbvLRqIzcg6WOKKGXdokFB2BMw&s">
+                      </div>
+                      <div class = "meal-link">
+                        <a href="https://www.youtube.com/watch?v=oWXlmAeqoUE&pp=ygUWZ3JpbGxlZCBjaGlja2VuIHJlY2lwZQ%3D%3D" class="meal-link-btn" >Watch Video</a>
+                    </div>
+                </div>
+        </div>
+            <!--Ending of Recipe Details-->
+
+     <!--Footer-->
+     <div class="footer">
+        <div class="social-btn">
+            <a href="https://www.facebook.com/Cmedsss" target="_blank" ><i class="	fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/tiaanmeds/" target="_blank" ><i class="	fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="	fab fa-youtube"></i></a>
+        </div>
+            <div class="quick-bar">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="meal plans.html">Meal Plans </a>
+                <a href="contact.html">Contact</a>
+            </div>
+    </div>
+
+    <!--Ending of Footer-->
+
+<!--Script for Javascript-->
+<script src="./assets/index.js">
+
+        // ///////////////////////email api//////////////////////////////
+emailjs.init("-Cwgnww4YUJvJL7qN"); // Replace with your public key
+
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault(); // Prevent the default form submission
+
+  emailjs
+    .sendForm('service_12vyn56', 'template_giqig0n', this)
+    .then(
+      function () {
+        alert('Thanks for contacting!');
+      },
+      function (error) {
+        alert('FAILED to sent your message try again later...', error.text);
+      }
+    );
+});
+</script>
+</script>
+</body>
+</html>
